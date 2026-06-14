@@ -5,20 +5,18 @@
 // GitHub 配置
 const GITHUB_USER = 'mizzen-ink';
 const GITHUB_REPO = 'portfolio';
-const GITHUB_TOKEN = '{{TOKEN}}';
-const API_BASE = 'https://api.github.com/repos/mizzen-ink/portfolio';
+const API_BASE = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}`;
 
 // 如果 URL 有 token 参数，保存到 localStorage
 const urlParams = new URLSearchParams(window.location.search);
 const urlToken = urlParams.get('token');
 if (urlToken) {
     localStorage.setItem('github_token', urlToken);
-    // 清除 URL 中的 token
     window.history.replaceState({}, '', window.location.pathname);
 }
 
 function getToken() {
-    return localStorage.getItem('github_token') || GITHUB_TOKEN;
+    return localStorage.getItem('github_token');
 }
 
 // ============================================
@@ -74,13 +72,37 @@ function insertMarkdown(before, after) {
 }
 
 // ============================================
-// 设置 GitHub Token（用户交互）
+// 设置 GitHub Token
 // ============================================
+function showTokenSetup() {
+    const modal = document.getElementById('token-modal');
+    if (modal) {
+        modal.classList.add('active');
+        document.getElementById('token-input')?.focus();
+    } else {
+        // Fallback prompt
+        setToken();
+    }
+}
+
 function setToken() {
-    const token = prompt('请输入 GitHub Personal Access Token:');
+    const token = prompt('请输入 GitHub Personal Access Token (ghp_...):');
+    if (token && token.trim()) {
+        localStorage.setItem('github_token', token.trim());
+        showToast('Token 已保存', 'success');
+    }
+}
+
+function saveTokenFromModal() {
+    const input = document.getElementById('token-input');
+    const token = input?.value.trim();
     if (token) {
         localStorage.setItem('github_token', token);
-        showToast('Token 已保存', 'success');
+        showToast('Token 已保存，现在可以发布文章了！', 'success');
+        document.getElementById('token-modal')?.classList.remove('active');
+        input.value = '';
+    } else {
+        showToast('请输入有效的 Token', 'error');
     }
 }
 
@@ -105,8 +127,8 @@ async function publishPost() {
     }
 
     const token = getToken();
-    if (!token || token === '{{TOKEN}}') {
-        showToast('请先设置 GitHub Token（点右上角 ⚙️）', 'error');
+    if (!token) {
+        showToast('请先设置 GitHub Token（点右上角 Token）', 'error');
         return;
     }
 
