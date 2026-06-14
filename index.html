@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>马壮壮 | C/C++ 开发工程师</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">&lt;<span>MZ</span>/&gt;</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">// home</a></li>
+                <li><a href="#about" class="nav-link">// about</a></li>
+                <li><a href="#skills" class="nav-link">// skills</a></li>
+                <li><a href="#projects" class="nav-link">// work</a></li>
+                <li><a href="#contact" class="nav-link">// contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <canvas id="particle-canvas"></canvas>
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Open for opportunities
+            </div>
+            <div class="hero-text">
+                <p class="hero-greeting">你好，我是</p>
+                <h1 class="hero-title">
+                    <span class="title-line">马壮壮</span>
+                    <span class="title-line title-accent">C/C++ Developer</span>
+                </h1>
+            </div>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span>Get In Touch</span>
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <div class="hero-status">
+                <div class="status-item">
+                    <i class="fas fa-code"></i>
+                    <span>200+ Articles</span>
+                </div>
+                <div class="status-item">
+                    <i class="fas fa-users"></i>
+                    <span>50K+ Readers</span>
+                </div>
+                <div class="status-item">
+                    <i class="fas fa-trophy"></i>
+                    <span>Top 3% CSDN</span>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+        <div class="terminal-decoration">
+            <div class="terminal-bar">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">developer@mazhuangzhuang:~</span>
+            </div>
+            <div class="terminal-body">
+                <p><span class="prompt">$</span> <span class="cmd">whoami</span></p>
+                <p class="output">&gt; 马壮壮</p>
+                <p><span class="prompt">$</span> <span class="cmd">cat /etc/passion</span></p>
+                <p class="output">&gt; C/C++. Backend. Performance.</p>
+                <p><span class="prompt">$</span> <span class="cmd typing-cmd">./build.sh --target future</span><span class="typed-cursor">|</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01.</span>
+                <h2 class="section-title">About <span>Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="about-highlight">20岁 · C/C++ 后端开发者 · 持续学习者</p>
+                    <p>热衷于探索计算机底层原理与网络通信技术。我相信，优秀的软件不是凭空出现的——它来自于对每一行代码的精心打磨和对底层机制的深入理解。</p>
+                    <p>我在 <strong>CSDN</strong> 上坚持技术写作，累计发表了 <strong>200+</strong> 篇文章，收获了 <strong>5W+</strong> 阅读量，排名社区前 <strong>3%</strong>。对我来说，写作不仅是分享，更是一种思考方式——用输出倒逼输入，把知识真正变成自己的。</p>
+                    <p>目前正在寻找 C/C++ 开发岗位，希望能在一个充满技术挑战的团队中继续成长。</p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <span class="info-label">Name</span>
+                            <span class="info-value">马壮壮</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Age</span>
+                            <span class="info-value">20</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Focus</span>
+                            <span class="info-value">C/C++ Backend</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">From</span>
+                            <span class="info-value">China</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-pen-fancy"></i></div>
+                        <span class="stat-number" data-target="200">0</span>
+                        <span class="stat-label">Articles</span>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-eye"></i></div>
+                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-label">K+ Readers</span>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                        <span class="stat-number-pct">3%</span>
+                        <span class="stat-label">CSDN Top</span>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
+                        <span class="stat-number" data-target="2">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02.</span>
+                <h2 class="section-title">My <span>Skills</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skills-category">
+                    <h3><i class="fas fa-code"></i> Languages & Core</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>C / C++</span>
+                                <span class="skill-pct">90%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>C++11/14/17</span>
+                                <span class="skill-pct">85%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>STL</span>
+                                <span class="skill-pct">88%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="88"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Data Structures</span>
+                                <span class="skill-pct">82%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="82"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3><i class="fab fa-linux"></i> Linux & System</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Linux Dev</span>
+                                <span class="skill-pct">85%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Socket / IO</span>
+                                <span class="skill-pct">80%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>GDB / GCC</span>
+                                <span class="skill-pct">78%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="78"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>libevent</span>
+                                <span class="skill-pct">75%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3><i class="fas fa-globe"></i> Networking & Protocols</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>TCP / UDP</span>
+                                <span class="skill-pct">85%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>HTTP/HTTPS</span>
+                                <span class="skill-pct">75%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>MySQL</span>
+                                <span class="skill-pct">72%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="72"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Redis</span>
+                                <span class="skill-pct">70%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="70"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03.</span>
+                <h2 class="section-title">Featured <span>Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-front">
+                            <div class="project-top">
+                                <div class="project-folder"><i class="fas fa-folder-open"></i></div>
+                                <div class="project-links">
+                                    <a href="https://github.com/mizzen-ink/myproject" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Linux C/S 通信系统</h3>
+                            <p class="project-desc">基于 Linux 平台的高性能客户端-服务端通信系统，支持高效稳定的大文件传输与并发连接处理。</p>
+                            <div class="project-techs">
+                                <span>C++</span><span>Socket</span><span>libevent</span>
+                                <span>MySQL</span><span>JSON</span><span>TCP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-front">
+                            <div class="project-top">
+                                <div class="project-folder"><i class="fas fa-folder-open"></i></div>
+                                <div class="project-links">
+                                    <a href="https://github.com/mizzen-ink/threadpool" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">C++11 线程池</h3>
+                            <p class="project-desc">5种高性能线程池模型，基于 C++11 标准，利用 packaged_task + future 实现高效异步任务调度。</p>
+                            <div class="project-techs">
+                                <span>C++11</span><span>Thread</span><span>Future</span>
+                                <span>packaged_task</span><span>GDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-front">
+                            <div class="project-top">
+                                <div class="project-folder"><i class="fas fa-folder-open"></i></div>
+                                <div class="project-links">
+                                    <a href="https://github.com/mizzen-ink" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">CSDN 技术博客</h3>
+                            <p class="project-desc">持续更新 C/C++、Linux、网络编程等技术文章，累计 200+ 篇，帮助了上万名开发者。</p>
+                            <div class="project-techs">
+                                <span>C/C++</span><span>Linux</span><span>Network</span>
+                                <span>DS & Algo</span><span>Writing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04.</span>
+                <h2 class="section-title">Get In <span>Touch</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-text">
+                    <p>我目前正在寻找 <strong>C/C++ 后端开发</strong> 岗位机会。如果你有合适的职位，或者只是想聊聊技术，欢迎联系我！</p>
+                </div>
+                <div class="contact-cards">
+                    <a href="tel:19891301801" class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-card-info">
+                            <span class="contact-card-label">Phone</span>
+                            <span class="contact-card-value">198-9130-1801</span>
+                        </div>
+                    </a>
+                    <a href="mailto:2716065616@qq.com" class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-card-info">
+                            <span class="contact-card-label">Email</span>
+                            <span class="contact-card-value">2716065616@qq.com</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/mizzen-ink" target="_blank" class="contact-card">
+                        <div class="contact-card-icon"><i class="fab fa-github"></i></div>
+                        <div class="contact-card-info">
+                            <span class="contact-card-label">GitHub</span>
+                            <span class="contact-card-value">@mizzen-ink</span>
+                        </div>
+                    </a>
+                    <a href="https://blog.csdn.net/" target="_blank" class="contact-card">
+                        <div class="contact-card-icon"><i class="fab fa-blogger-b"></i></div>
+                        <div class="contact-card-info">
+                            <span class="contact-card-label">CSDN</span>
+                            <span class="contact-card-value">@mizzen-ink</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="contact-cta">
+                    <p>Say Hello!</p>
+                    <a href="mailto:2716065616@qq.com" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>2716065616@qq.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">&lt;<span>MZ</span>/&gt;</div>
+            <p class="footer-text">Designed & Built by 马壮壮</p>
+            <div class="footer-socials">
+                <a href="https://github.com/mizzen-ink" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:2716065616@qq.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
