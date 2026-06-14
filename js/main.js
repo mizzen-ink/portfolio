@@ -319,3 +319,15 @@ console.log('%c 马壮壮 | Portfolio ',
     'background:#7c6aff; color:white; font-size:18px; font-weight:bold; padding:10px 20px; border-radius:8px; font-family:monospace;');
 console.log('%c C/C++ Developer | Open to opportunities ',
     'color:#8888a0; font-size:13px; padding:5px; font-family:monospace;');
+
+// ============================================
+// 网站运行天数
+// ============================================
+(function updateSiteAge() {
+    const el = document.getElementById('site-age');
+    if (!el) return;
+    const startDate = new Date('2026-06-14');
+    const now = new Date();
+    const diff = Math.floor((now - startDate) / (1000 * 60 * 60 * 24));
+    el.textContent = `Running ${diff} days`;
+})();

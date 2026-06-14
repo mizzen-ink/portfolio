@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客 | 马壮壮</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">&lt;<span>MZ</span>/&gt;</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">// home</a></li>
+                <li><a href="index.html#about" class="nav-link">// about</a></li>
+                <li><a href="index.html#skills" class="nav-link">// skills</a></li>
+                <li><a href="index.html#projects" class="nav-link">// work</a></li>
+                <li><a href="blog.html" class="nav-link active">// blog</a></li>
+                <li><a href="index.html#contact" class="nav-link">// contact</a></li>
+            </ul>
+            <div class="nav-toggle"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="blog-page">
+        <div class="container">
+            <div class="section-header" style="padding-top: 120px;">
+                <span class="section-number">BLOG</span>
+                <h2 class="section-title">Latest <span>Posts</span></h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="blog-toolbar">
+                <div class="blog-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="blog-search" placeholder="搜索文章..." oninput="filterPosts()">
+                </div>
+                <div class="blog-filter">
+                    <button class="filter-btn active" data-filter="all" onclick="filterByTag('all')">All</button>
+                </div>
+            </div>
+
+            <div id="blog-list" class="blog-list">
+                <div class="blog-loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>加载文章中...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">&lt;<span>MZ</span>/&gt;</div>
+            <p class="footer-text">Designed & Built by 马壮壮</p>
+            <div class="footer-socials">
+                <a href="https://github.com/mizzen-ink" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:2716065616@qq.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/blog.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
