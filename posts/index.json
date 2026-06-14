@@ -1,9 +1,16 @@
 [
   {
+    "title": "C++ 工厂模式：从入门到进阶，彻底掌握对象创建的艺术",
+    "date": "2026-06-14",
+    "tags": ["C++", "设计模式", "工厂模式", "C++11"],
+    "description": "从简单工厂到抽象工厂，结合现代C++特性给出工程级最佳实现。",
+    "filename": "2026-06-14-factory-pattern.md"
+  },
+  {
     "title": "讲讲IO复用三个函数的底层逻辑",
     "date": "2026-06-14",
     "tags": ["Linux", "IO复用", "select", "poll", "epoll"],
-    "description": "深入剖析select、poll、epoll三种IO复用机制的底层实现原理与性能差异。",
+    "description": "深入剖析select、poll、epoll三种IO复用机制的底层实现原理。",
     "filename": "2026-06-14-io-multiplexing.md"
   },
   {
@@ -14,17 +21,31 @@
     "filename": "2026-06-14-threadpool-implementation.md"
   },
   {
+    "title": "数据结构 —— BST 树（二叉搜索树）",
+    "date": "2026-06-13",
+    "tags": ["数据结构", "BST", "二叉搜索树", "C/C++"],
+    "description": "二叉查找树基于左小右大的约束规则实现高效的动态有序操作。",
+    "filename": "2026-06-13-bst-tree.md"
+  },
+  {
     "title": "数据结构：红黑树原理与实现",
     "date": "2026-06-13",
     "tags": ["数据结构", "红黑树", "C/C++", "算法"],
-    "description": "红黑树是map、set等关联式容器的核心底层数据结构。本文详细讲解其原理与实现。",
+    "description": "红黑树是map、set等关联式容器的核心底层数据结构。",
     "filename": "2026-06-13-red-black-tree.md"
+  },
+  {
+    "title": "链式栈的实现",
+    "date": "2026-06-12",
+    "tags": ["数据结构", "栈", "C/C++", "链表"],
+    "description": "链式栈是基于链表实现的栈结构，具有动态扩容的优势。",
+    "filename": "2026-06-12-linked-stack.md"
   },
   {
     "title": "讲讲移动语义：深入理解C++11右值引用",
     "date": "2026-06-12",
     "tags": ["C++", "C++11", "移动语义", "右值引用"],
-    "description": "从底层原理出发，彻底讲清C++11的移动语义、右值引用、std::move和完美转发。",
+    "description": "彻底讲清C++11的移动语义、右值引用、std::move和完美转发。",
     "filename": "2026-06-12-move-semantics.md"
   }
 ]
