@@ -331,3 +331,17 @@ console.log('%c C/C++ Developer | Open to opportunities ',
     const diff = Math.floor((now - startDate) / (1000 * 60 * 60 * 24));
     el.textContent = `Running ${diff} days`;
 })();
+
+// ============================================
+// 访问计数器
+// ============================================
+(function checkViewCount() {
+    const checkExist = setInterval(() => {
+        const pv = document.getElementById('busuanzi_value_site_pv');
+        if (pv && pv.textContent && pv.textContent !== '0' && pv.textContent !== '') {
+            clearInterval(checkExist);
+        }
+    }, 500);
+    // 10秒后停止检查
+    setTimeout(() => clearInterval(checkExist), 10000);
+})();
