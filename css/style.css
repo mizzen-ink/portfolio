@@ -260,6 +260,52 @@ ul { list-style: none; }
     background-clip: text;
     font-size: clamp(1.8rem, 5vw, 3rem);
 }
+
+/* Hero Alias (网名签名) */
+.hero-alias {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    animation: fadeInUp 0.8s ease 0.3s both;
+}
+.alias-prefix {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background: rgba(124, 106, 255, 0.08);
+    padding: 4px 12px;
+    border-radius: 50px;
+    border: 1px solid var(--border);
+    letter-spacing: 0.5px;
+}
+.alias-name {
+    font-family: 'Noto Serif SC', 'STSong', 'SimSun', serif;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-weight: 600;
+    background: linear-gradient(135deg, #b8a9ff 0%, #ff9a9e 50%, #fad0c4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 3px;
+    position: relative;
+    padding: 0 4px;
+}
+.alias-name::before {
+    content: '"';
+    -webkit-text-fill-color: var(--accent);
+    color: var(--accent);
+    opacity: 0.6;
+    margin-right: 2px;
+}
+.alias-name::after {
+    content: '"';
+    -webkit-text-fill-color: var(--accent);
+    color: var(--accent);
+    opacity: 0.6;
+    margin-left: 2px;
+}
 .hero-actions {
     display: flex;
     justify-content: center;
@@ -892,6 +938,17 @@ footer {
 }
 .footer-logo span { color: var(--accent); }
 .footer-text { color: var(--text-muted); font-size: 0.85rem; }
+.footer-name { color: var(--text-primary); }
+.footer-alias {
+    font-family: 'Noto Serif SC', 'STSong', 'SimSun', serif;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #b8a9ff 0%, #fad0c4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
 .footer-socials { display: flex; gap: 16px; }
 .footer-socials a {
     color: var(--text-muted);
