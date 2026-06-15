@@ -1,5 +1,5 @@
 /* ============================================
-   马壮壮 | Personal Portfolio - Main JS
+   南境十里·墨染春水 | Personal Portfolio - Main JS
    ============================================ */
 
 // ============================================
@@ -315,8 +315,8 @@ window.addEventListener('load', () => {
     document.querySelector('.hero-title').style.opacity = '1';
 });
 
-console.log('%c 马壮壮 · 南境十里·墨染春水 ',
-    'background:#7c6aff; color:white; font-size:18px; font-weight:bold; padding:10px 20px; border-radius:8px; font-family:monospace;');
+console.log('%c 南境十里·墨染春水 ',
+    'background:linear-gradient(135deg,#c4b5fd,#f9a8d4,#fbbf24); color:white; font-size:18px; font-weight:bold; padding:10px 20px; border-radius:8px; font-family:serif;');
 console.log('%c C/C++ Developer | Open to opportunities ',
     'color:#8888a0; font-size:13px; padding:5px; font-family:monospace;');
 console.log('%c 南境十里，墨染春水。笔耕不辍，码上生花。 ',
